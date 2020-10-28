@@ -1,0 +1,7 @@
+- id: terraform_validate
+  name: Terraform validate
+  description: Run terraform validate for all directories
+  entry: bin/tf_validate.sh
+  language: script
+  files: (\.tf|\.tfvars)$
+  exclude: \.terraform\/.*$
