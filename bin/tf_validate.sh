@@ -22,7 +22,7 @@ initialize_() {
 
   # source getopt function
   # shellcheck source=lib_getopt
-  . "$_SCRIPT_DIR/lib_getopt"
+  . "$_SCRIPT_DIR/../lib/libgetopt"
 }
 
 parse_cmdline_() {
