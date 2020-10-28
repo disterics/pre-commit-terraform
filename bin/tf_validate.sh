@@ -96,7 +96,7 @@ terraform_validate_() {
       done
 
       local validate_path
-      validate_path="${path_uniq#"$terraform_path"}"
+      validate_path=".${path_uniq#"$terraform_path"}"
 
       # Change to the directory that has been initialized, run validation, then
       # change back to the starting directory.
@@ -107,7 +107,7 @@ terraform_validate_() {
         echo "Failed path: $path_uniq"
         echo "================================"
       fi
-      cd "$starting_path"
+      cd -
     fi
   done
 
